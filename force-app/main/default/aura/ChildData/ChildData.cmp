@@ -1,0 +1,4 @@
+<aura:component >
+	    <aura:attribute name="LastName" type="String"/>
+	{!v.LastName}
+</aura:component>

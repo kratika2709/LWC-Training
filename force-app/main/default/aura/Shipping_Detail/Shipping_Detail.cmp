@@ -1,0 +1,21 @@
+<aura:component >
+    <aura:attribute name="city" type="string" />
+	<aura:attribute name="state" type="string" />
+    <aura:attribute name="PinCode" type="integer" />
+     <aura:handler name="init" value="{!this}" action="{!c.doinit}" />
+    
+      <lightning:card title="City Detail" iconName="standard:agent_home" footer="This page shows complete details." >
+          <aura:set attribute="title" >
+              
+                   "Complete Details"
+           </aura:set>  
+          <aura:set attribute="actions">
+              <lightning:icon iconName="standard:account"/>
+              <lightning:button label="Click here" onclick="{!c.doClick}" />
+          </aura:set>
+                    City:    {!v.city}<br/>
+                    State:   {!v.state}<br/>
+                    PinCode: {!v.PinCode}
+          
+      </lightning:card>
+</aura:component>

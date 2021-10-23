@@ -1,0 +1,9 @@
+<aura:component >
+    <aura:attribute name="Sname" type="string"/>
+    <aura:attribute name="Splace" type="string"/>
+    <lightning:input label="Enter Name" value="{!v.Sname}"/>
+    <lightning:input label="Enter City" value="{!v.Splace}"/>
+    
+    <aura:registerEvent name="SecondEvent" type="c:EventTwo"/>
+    <lightning:button label="Click" onclick="{!c.doInit}"/> 
+</aura:component>

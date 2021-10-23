@@ -1,0 +1,6 @@
+<aura:component >
+	<aura:registerEvent name="SecondEvent" type="c:EventUseCase"/>
+    <lightning:button  label="Create" onclick="{!c.ClickHere}"/>
+    <aura:attribute name="con" type="contact"/>
+    <lightning:input name="lastname" type="string" value="{!v.contact}"/>
+</aura:component>

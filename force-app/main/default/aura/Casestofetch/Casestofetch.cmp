@@ -1,0 +1,16 @@
+<aura:component controller="Casestofetch" implements="force:hasRecordId,force:hassobjectName,flexiPage:availableForAllPageTypes" access="global">
+    <aura:attribute name="caselist" type="List" />
+    <aura:handler name="init" value="{!this}" action="{!c.docreateCaselist}" />
+    {!v.recordId}
+    <aura:iteration items="{!v.caselist}" var="cs">
+        {!v.caselist}
+        <div class="slds-col slds-size_1-of-3 slds-var-p-around_x-small" >
+             <lightning:card title="{!cs.origin}" iconName="action:new_case" >
+                Subject: {!cs.Subject},Case ID:{!cs.Id}<br/>
+              Case No.:{!cs.CaseNumber}, Case Status:{!cs.Status}
+            </lightning:card>
+        </div>
+     </aura:iteration>
+    
+	
+</aura:component>

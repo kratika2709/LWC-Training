@@ -1,0 +1,8 @@
+<aura:component controller="AppEventUseCase">
+    <aura:handler event="c:AppUseCase" action="{!c.searchRelatedOpportunities}"/>
+    <aura:attribute name="oppList" type="Opportunity"/>
+    <aura:iteration items="{!v.oppList}" var="opp">
+       Opportunity Name:{!opp.Name}
+        
+    </aura:iteration>
+</aura:component>

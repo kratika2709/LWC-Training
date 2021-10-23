@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Account RecordList">
+        <lightning-input type="search" label="Search Here" onchange={changeHandler} value={accountName}></lightning-input>
+        <template if:true={accList}>
+        <template for:each={accList} for:item="account" >
+            <div class="slds-box slds-box_xx-small" key={account.id}>
+                <p>{account.Name}</p>
+               
+
+            </div>
+        </template>
+    </template>
+    </lightning-card>
+</template>

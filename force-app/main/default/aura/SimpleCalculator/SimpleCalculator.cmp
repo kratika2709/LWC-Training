@@ -1,0 +1,16 @@
+<aura:component>
+   
+    <aura:attribute name="firstnumber" type="integer" access="public" />
+    <aura:attribute name="Secondnumber" type="integer" access="public" />
+        
+        <lightning:input type="number" name="input1" label="Number1" value="{!v.firstnumber}" />
+        <lightning:input type="number" name="input2" label="Number2" value="{!v.Secondnumber}" />
+        {!v.firstnumber}
+        {!v.Secondnumber}
+         {!mult(v.firstnumber,v.Secondnumber)}
+    <lightning:button name="click" label="Click Here" onclick="{!c.click}" />
+    <lightning:input aura:id="age" label="Enter age" />
+       
+   
+    
+</aura:component>

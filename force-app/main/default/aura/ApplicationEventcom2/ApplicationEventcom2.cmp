@@ -1,0 +1,5 @@
+<aura:component >
+    <aura:attribute name="ShowMsg" type="string"/>
+  	<aura:handler  event="c:ApplicationEvent" action="{!c.Callme}"/>
+   NAME :  {!v.ShowMsg}
+</aura:component>

@@ -1,0 +1,16 @@
+@import 'c/sharedcss';
+.xyz{
+    background-color: aqua;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: medium;
+}
+
+.dynamic{
+    background-color : pink;
+
+}
+.dynamiscecond{
+    background-color : black;
+    color: white;
+
+}

@@ -1,0 +1,18 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,force:lightningQuickAction,force:hasRecordId" controller="CreateAuraContact">
+    <aura:attribute name="con" type="contact" default="{'sObjectType':'contact'}" />
+    <aura:attribute name="backgroundColor" type="String" default="#000000"/>
+    <aura:attribute name="textFontSize" type="Integer" default="18" />
+    <aura:attribute name="textColor" type="String" default="#e81717" />
+    <lightning:card title="Contacts">
+        <aura:set attribute="actions">
+        <lightning:button label="save" onclick="{!c.doSave}" />
+        </aura:set>
+        <lightning:input label="FirstName" value="{!v.con.FirstName}"/>
+        <lightning:input label="LastName" value="{!v.con.LastName}"/>
+        <lightning:input label="Phone" value="{!v.con.Phone}"/>
+        <lightning:input label="Email" value="{!v.con.Email}"/>
+    
+    
+    
+    </lightning:card>
+</aura:component>

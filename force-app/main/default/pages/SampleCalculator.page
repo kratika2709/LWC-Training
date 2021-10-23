@@ -1,0 +1,23 @@
+<apex:page controller="VFCalculator" tabStyle="Account" showHeader="false" sidebar="false">
+
+<apex:form >
+<apex:pageBlock title="Basic Calculator">
+ <apex:pageBlockButtons location="Bottom">
+   <apex:commandButton Value="Addition" action="{!Addition}" reRender="res,error"/>
+   <apex:commandButton Value="Multiplication" action="{!Multiplication}" reRender="res,error"/>
+    <apex:commandButton Value="Subtraction" action="{!Subtraction}" reRender="res,error"/>
+ </apex:pageBlockButtons>
+ <apex:pageMessages id="error"></apex:pageMessages>>
+ <apex:pageBlockSection collapsible="false" title="Calculator">
+   <apex:inputtext label="Enter FirstNumber" value="{!firstnumber}" required="true"/> 
+   <apex:inputtext label="Enter SecondNumber" value="{!secondnumber}" required="true"/>
+   <apex:outputLabel id="res">Result=="{!result}"</apex:outputLabel>
+
+</apex:pageBlockSection>
+</apex:pageBlock>
+</apex:form>
+
+
+
+  
+</apex:page>

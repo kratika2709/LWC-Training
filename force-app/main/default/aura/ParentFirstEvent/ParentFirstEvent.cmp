@@ -1,0 +1,7 @@
+<aura:component >
+    <aura:attribute type="string" name="EventMessage" />
+    <aura:handler name="cmpEvent" event="c:FirstEvent" action="{!c.Callme}"/>
+    <c:FirstEventChild/>
+    
+    {!v.EventMessage}
+</aura:component>

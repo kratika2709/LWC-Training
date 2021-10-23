@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Parent component">
+        <div >
+          <p>This is Parent Component.</p>
+           <lightning-input type="number" value={barValue} onkeyup={doChange} ></lightning-input>
+          <c-child-component
+            name= "infoFeat Technoligies" 
+            address= "103,Exatip Technologies,Electronic Complex,Indore"
+            year="April,2021"
+            companydata={CompanyNames}
+            changebar-value={barValue}
+            
+            ></c-child-component>   
+      </div>
+      </lightning-card>
+      
+      
+</template>

@@ -1,0 +1,8 @@
+<aura:component controller="AppEventUseCase" >
+    <aura:attribute name="acc" type="String" />
+    <lightning:input name="acc_name" label="Enter Account Name" value="{!v.acc}"/>
+    <lightning:button label="Search Account" value= "{!v.acc}" onclick="{!c.click}" />
+   
+   
+   
+</aura:component>

@@ -1,0 +1,6 @@
+<aura:component >
+	<aura:registerEvent name="cmpEvent" type="c:FirstEvent"/>
+   <lightning:card>
+    <lightning:button label ="Click Here" variant="brand" onclick="{!c.doClick}"/>
+    </lightning:card>
+</aura:component>

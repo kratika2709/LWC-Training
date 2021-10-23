@@ -1,0 +1,4 @@
+<aura:component >
+    <aura:attribute name="FirstName" type="String" default="Ritika"/>
+    <c:ChildData  LastName="{!v.FirstName}"  />
+</aura:component>

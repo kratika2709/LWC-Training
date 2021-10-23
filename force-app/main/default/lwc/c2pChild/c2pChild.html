@@ -1,0 +1,9 @@
+<template>
+    <lightning-card label="Child to Parent Calling">
+        <div>
+            <lightning-input name="firstno" label="Number1" placeholder="Enter a Number" onchange={changeHandler1}></lightning-input>
+            <lightning-input name="secondno" label="Number2" placeholder="Enter a Number" onchange={changeHandler2}></lightning-input>
+            <lightning-button label="SUM" variant="brand" onclick={sumhandler}></lightning-button>
+        </div>
+    </lightning-card>
+</template>

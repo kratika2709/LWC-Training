@@ -1,0 +1,8 @@
+<aura:component >
+    <aura:attribute name="lastname" type="string" default="Chouhan" />
+	<aura:attribute name="firstname" type="string" default="Kratika" />
+    <aura:attribute name="Phone" type="integer" default="8855528451" />
+    LastName:  {!v.lastname}<br/>
+    FirstName:{!v.firstname}<br/>
+    Phone:     {!v.Phone}
+</aura:component>

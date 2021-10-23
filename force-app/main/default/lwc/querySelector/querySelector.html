@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="Query Selector">
+        
+        <h1>This Is my Team</h1> 
+         <template for:each={TeamMembers} for:item="Team">
+             <div class="TeamAll" key={Team}>{Team}</div>
+         </template>
+         <lightning-button label="Click Here" onclick={doClick} slot="actions"></lightning-button>
+    </lightning-card>
+</template>

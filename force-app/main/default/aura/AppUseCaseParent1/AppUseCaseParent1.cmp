@@ -1,0 +1,8 @@
+<aura:component controller="AppEventUseCase">
+    <aura:handler event="c:AppUseCase" action="{!c.searchRelatedContacts}"/>
+    <aura:attribute name="contactList" type="Contact"/>
+    <aura:iteration items="{!v.contactList}" var="con">
+       FirtName: {!con.FirstName}<br/>
+       LastName: {!con.LastName}
+    </aura:iteration>
+</aura:component>

@@ -1,0 +1,8 @@
+<aura:component >
+    <aura:attribute name="Productname" type="string" />
+    <aura:attribute name="Price" type="currency" />
+    <aura:attribute name="Quantity" type="integer" />
+    {!v.Productname}<br/>
+    {!v.Price}<br/>
+    {!v.Quantity}
+</aura:component>

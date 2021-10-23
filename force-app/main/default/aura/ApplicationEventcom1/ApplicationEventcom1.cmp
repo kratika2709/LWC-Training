@@ -1,0 +1,5 @@
+<aura:component >
+    
+    <aura:registerEvent name="SecondEvent" type="c:ApplicationEvent"/>
+    <lightning:button  label="Show" onclick="{!c.ClickHere}"/>
+</aura:component>

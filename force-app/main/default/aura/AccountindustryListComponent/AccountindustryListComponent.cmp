@@ -1,0 +1,14 @@
+<aura:component controller = "AccountIndustryList" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="options" type="list" />
+    <aura:attribute name="selectedValue" type="String" />
+    <aura:handler name="init" value="{!this}" action="{!c.init}" />
+    <lightning:card>
+        <lightning:input aura:id="accountName" label="Enter Account Name" />
+        <lightning:select name="colorId" label="Select a color:" aura:id="industryId" value="{!v.selectedValue}">
+            <aura:iteration items="{!v.options}" var="option">
+                <option text="{!option.key}" value="{!option.value}" selected="{!option.selected}"/>
+            </aura:iteration>
+        </lightning:select>	
+        <lightning:button variant="brand" label="Create Account" onclick="{!c.doCreateNewAccount}"/>
+    </lightning:card>
+</aura:component>

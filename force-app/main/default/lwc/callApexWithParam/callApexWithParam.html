@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Apex call by Method/Function with Parameter">
+        <lightning-combobox name="PickRate" 
+                      label="choose a rating" 
+                      value={selectRating} 
+                      options={typeofRatings} 
+                      onchange={ratingHandler}></lightning-combobox>
+        <template if:true={typeOfRating.data}>
+            <template for:each={typeOfRating.data} for:item="account">
+                <div class="slds-box slds-box_xx-small" key={account.id}>
+                    <p>{account.id}</p>
+                    <p>{account.name}</p>
+                   <p>{account.Rating}</p>
+                   <p>{account.Type}</p>
+
+                </div>
+            </template>
+        </template>
+    </lightning-card>
+</template>

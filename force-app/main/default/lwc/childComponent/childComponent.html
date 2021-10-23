@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Child Component Primitive Data calling.">
+        <div>
+            {name} {address} {year}
+          <p>This is Child Component.</p>
+          {Example}
+          </div>
+      </lightning-card>
+      <lightning-card title="Non Primitive Data calling">
+         <template for:each={companydata} for:item="Companies">
+             <div class="slds-box" key={Companies}>{Companies}</div>
+         </template>
+      </lightning-card>
+      <lightning-card title="Parent to child Action Component.">
+        <lightning-progress-bar value={changebarValue} size="large"></lightning-progress-bar>
+      </lightning-card>
+     
+</template>

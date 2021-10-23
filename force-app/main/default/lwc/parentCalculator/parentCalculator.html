@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Parent to Child Calculator.">
+        <div>
+            <lightning-input name= "Num1" label="Number1" type="integer" onchange={handleNum1}></lightning-input>
+            <lightning-input name= "Num2" label="Number2" type="integer" onchange={handleNum2}></lightning-input>
+            <lightning-button label="SUM +" onclick={sumHandler}></lightning-button>
+            <lightning-button label="Subtract -" onclick={subHandler}>{sub}</lightning-button>
+            <lightning-button label="Mul *" onclick={mulHandler}>{mul}</lightning-button>
+            <lightning-button label="Divide /" onclick={divHandler}>{div}</lightning-button>
+            <c-child-calculator
+            finalresult={result}
+            ></c-child-calculator>
+        </div>
+    </lightning-card>
+</template>

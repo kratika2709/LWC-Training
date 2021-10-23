@@ -1,0 +1,11 @@
+<aura:component >
+    <aura:attribute name="amount" type="decimal" default="3000"/>
+    <aura:attribute name="rate" type="decimal" default="3"/>
+    <aura:attribute name="time" type="integer" default="4"/>
+    <aura:attribute name="Total" type="decimal"/>
+     <aura:handler name="init" value="{!this}" action="{!c.doinit}" />
+    
+
+    Simple Interest:{!v.Total}
+    
+</aura:component>

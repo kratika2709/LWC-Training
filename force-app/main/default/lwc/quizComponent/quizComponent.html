@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="QUIZ" icon-name="standard:work_order_item">
+    
+        <div class="slds-box">
+        <p><b>1.Who is the PM of our country?</b></p>
+        <lightning-radio-group name="radioGroup"
+        options={options}
+        value={value}
+        type="radio"></lightning-radio-group>
+    </div>
+  
+  
+    <div class="slds-box">
+        <p><b>2.What is the Name of our country?</b></p>
+        <lightning-radio-group name="radioGroup"
+        options={options1}
+        value={value1}
+        type="radio"></lightning-radio-group>
+    </div>
+    <lightning-button label="SUBMIT"></lightning-button>
+    
+    
+</lightning-card>
+</template>

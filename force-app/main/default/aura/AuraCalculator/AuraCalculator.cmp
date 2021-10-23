@@ -1,0 +1,24 @@
+<aura:component>
+    <div><h1>CALCULATOR</h1></div><br/>
+    <aura:attribute name = "mynum1" type = "Integer"/>
+     <aura:attribute name = "mynum2" type = "Integer"/>   
+    <aura:attribute name = "result" type = "Integer"/>
+   
+    <lightning:input label = "Number1:" value = "{!v.mynum1}"/>
+    <br/>
+    
+    <lightning:input label = "Number2:" value = "{!v.mynum2}"/>
+    <br/>
+    
+    <div>Result = {!v.result}</div>
+                     
+     <div>
+         <lightning:button label = "Addition" onclick = "{!c.addition}"/>
+         <lightning:button label = "Refresh" onclick = "{!c.refresh}"/>
+         <lightning:button label = "Substraction" onclick = "{!c.substraction}"/>
+         <lightning:button label = "Multiplication" onclick = "{!c.multiplication}"/>
+         <lightning:button label = "Division" onclick = "{!c.division}"/>
+    </div>
+     
+    
+</aura:component>

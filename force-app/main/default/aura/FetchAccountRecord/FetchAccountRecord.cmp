@@ -1,0 +1,21 @@
+<aura:component controller="FetchAccountDetails">
+    <aura:attribute name="accounts" type="string[]"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/> 
+    <lightning:input type="text" name="searchKey" label="Search" aura:id="searchKey" onchange="{!c.searchKeyChange}" placeholder="Search" />    
+
+      <aura:iteration items ="{!v.accounts}" var="acc">
+        <lightning:card title="Accounts" iconName="standard:account" footer="This page shows account details.">
+               <div class= "slds-var-p-around_x-small">
+                      <div class="slds-col slds-order_3">
+                   Account Name: {!acc.Name}<br/> 
+                   Account Type: {!acc.Type}<br/> 
+                   Account Rating:{!acc.Rating}<br/>
+                   Account Rating: {!acc.rating}<br/>
+                   Account Phone : {!acc.Phone}
+                      </div>
+                  </div>
+          
+        
+     </lightning:card>
+    </aura:iteration>
+</aura:component>

@@ -1,0 +1,9 @@
+<aura:component >
+	<aura:attribute type="string" name="PStudent" />
+    <aura:attribute type="string" name="PPlace" />
+    <aura:handler name="SecondEvent" event="c:EventTwo" action="{!c.Callme}"/>
+    <c:EventTwoChild/>
+    
+    Student Name:{!v.PStudent}<br/>
+    Place       :{!v.PPlace}
+</aura:component>
