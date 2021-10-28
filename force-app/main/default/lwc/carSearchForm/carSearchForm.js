@@ -24,7 +24,7 @@ if(data){
 
 handleCarTypeChange(event){
 const carTypeId = event.detail.value;
-const CarTypeSelectionChangeEvent = new CustomEvent('cartyoeselect',{
+const CarTypeSelectionChangeEvent = new CustomEvent('cartypeselect',{
     detail:carTypeId});
     this.dispatchEvent(CarTypeSelectionChangeEvent);
 }
