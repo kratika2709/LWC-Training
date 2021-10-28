@@ -5,14 +5,14 @@ public with sharing class CarSearchResultController {
 
     if(string.isEmpty(carTypeId)){
         return [select id,name , picture__c , Contact__r.Name ,
-        Geolocation__latitude___s, Geolacation__longitude__s
+        Geolocation__latitude__s, Geolocation__longitude__s
         from car__c
         where Available_for_rent__c = true];
 
     } else {
         
         return [select id,name , picture__c , Contact__r.Name ,
-        Geolocation__latitude___s, Geolacation__longitude__s
+        Geolocation__latitude__s, Geolocation__longitude__s
         from car__c
         where Available_for_rent__c = true
         and Car_Type__c =:carTypeId];
