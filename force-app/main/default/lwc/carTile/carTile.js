@@ -7,14 +7,13 @@ export default class CarTile extends LightningElement {
     handleCarSelect(event){
         event.preventDefault();
         
-        const carId = this.car.id;
+        const carId = this.car.Id;
         
         const carSelect= new CustomEvent('carselect',{detail:carId});
         this.dispatchEvent(carSelect);
     }
     get isCarSelected(){
-      this.selectedCarId = carId;
-        if(this.carId=== this.selectedCarId){
+        if(this.car.Id=== this.carSelectedId){
             return "tile selected";
         } 
         return "tile";

@@ -1,12 +1,14 @@
+<!-- sldsValidatorIgnore -->
+<!-- sldsValidatorIgnore -->
 <template>
     <a onclick={handleCarSelect}>
-        <div class={isCarSelected}>
+      <div class={isCarSelected}>
         <img src={car.Picture__c} class="car slds-align_absolute-center" alt="Car Picture"/>
-        <div>
+           <div>
             <p class="title slds-align_absolute-center" >
                 {car.Contact__r.Name}
             </p>
-        </div>
+        </div>  
     </div>
     </a>
 </template>
