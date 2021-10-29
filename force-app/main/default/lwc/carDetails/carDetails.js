@@ -29,7 +29,7 @@ const fields = [
 
 export default class CarDetails extends LightningElement {
 
-    carId;
+    @track carId;
     @track selectedTabValue;
     
     @wire(CurrentPageReference) pageRef;
