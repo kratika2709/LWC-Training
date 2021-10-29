@@ -53,6 +53,14 @@ export default class CarDetails extends LightningElement {
         this.selectedTabValue = event.target.value;
     }
 
+    experienceAddedhandler(){
+         const carexpErienceComponent =this.template.querySelector('c-car-experiences');
+         if(carexpErienceComponent){
+            carexpErienceComponent.getCarExperiences();
+         }
+         this.selectedTabValue='viewexperience';
+    }
+
     get carFound(){
         if(this.car.data){
             return true;

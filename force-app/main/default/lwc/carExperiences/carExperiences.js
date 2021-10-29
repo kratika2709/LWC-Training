@@ -23,7 +23,8 @@ export default class CarExperiences extends NavigationMixin(LightningElement) {
         this.PrivateCarId= value;
         this.getCarExperiences();
     }
-
+  
+    @api
     getCarExperiences(){
         getExperiences({carId : this.PrivateCarId}).then( (experiences) =>{
             this.carExperiences = experiences;
