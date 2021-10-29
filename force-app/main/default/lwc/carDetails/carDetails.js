@@ -1,36 +1,62 @@
-import { LightningElement,wire ,track} from 'lwc';
-import {getRecord} from 'lightning/uiRecordApi';
+import { LightningElement, wire, track } from 'lwc';
+import { getRecord } from 'lightning/uiRecordApi';
+import { registerListener, unregisterAllListeners } from 'c/pubsub';
+import { CurrentPageReference } from 'lightning/navigation';
 
-import Car_id from '@salesforce/schema/car__c.id';
-import Car_Name from '@salesforce/schema/car__c.Name';
-import Car_Mileage from '@salesforce/schema/car__c.Mileage__c';
-import Car_Per_Day_Rent from '@salesforce/schema/car__c.Per_Day_Rent__c';
-import Car_Build_Year from '@salesforce/schema/car__c.Build_Year__c';
-import Car_Picture from '@salesforce/schema/car__c.Picture__c';
-import Car_Contact_Name from '@salesforce/schema/car__c.Contact__r.Name';
-import Car_Contact_Email from '@salesforce/schema/car__c.Contact__r.Email';
-import Car_Contact_Phone from '@salesforce/schema/car__c.Contact__r.HomePhone';
-import Car_CarType_Name from '@salesforce/schema/car__c.car_type__r__r.Name';
+import CAR_ID from '@salesforce/schema/Car__c.Id';
+import CAR_NAME from '@salesforce/schema/Car__c.Name';
+import CAR_MILEAGE from '@salesforce/schema/Car__c.Mileage__c';
+import CAR_PER_DAY_RENT from '@salesforce/schema/Car__c.Per_Day_Rent__c';
+import CAR_BUILD_YEAR from '@salesforce/schema/Car__c.Build_Year__c';
+import CAR_PICTURE from '@salesforce/schema/Car__c.Picture__c';
+import CAR_CONTACT_NAME from '@salesforce/schema/Car__c.Contact__r.Name';
+import CAR_CONTACT_EMAIL from '@salesforce/schema/Car__c.Contact__r.Email';
+import CAR_CONTACT_PHONE from '@salesforce/schema/Car__c.Contact__r.HomePhone';
+import CAR_CARTYPE_NAME from '@salesforce/schema/Car__c.Car_Type__r.Name';
 
-const fields= [
-    Car_id,
-    Car_Name ,
-    Car_Mileage,
-    Car_Per_Day_Rent,
-    Car_Build_Year,
-    Car_Picture,
-    Car_Contact_Name,
-    Car_Contact_Phone,
-    Car_CarType_Name
-] 
+const fields = [
+    CAR_ID,
+    CAR_NAME,
+    CAR_PER_DAY_RENT,
+    CAR_BUILD_YEAR,
+    CAR_PICTURE,
+    CAR_CONTACT_NAME,
+    CAR_CONTACT_EMAIL,
+    CAR_CONTACT_PHONE,
+    CAR_MILEAGE,
+    CAR_CARTYPE_NAME
+]
+
 export default class CarDetails extends LightningElement {
+
     carId;
     @track selectedTabValue;
+    
+    @wire(CurrentPageReference) pageRef;
 
-    @wire(getRecord,{recordId :'$carId',fields})
+    @wire(getRecord, { recordId : '$carId', fields})
     car;
 
-    tabSelectHandler(event){
-       this.selectedTabValue=event.target.value;
+    connectedCallback(){
+        registerListener('carselect', this.callBackMethod, this);
+    }
+
+    callBackMethod(payload){
+        this.carId = payload;
+    }
+
+    disconnectedCallback(){
+        unregisterAllListeners(this);
+    }
+
+    tabChangeHandler(event){
+        this.selectedTabValue = event.target.value;
+    }
+
+    get carFound(){
+        if(this.car.data){
+            return true;
+        }
+        return false;
     }
 }

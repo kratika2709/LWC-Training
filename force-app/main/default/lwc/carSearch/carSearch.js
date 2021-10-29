@@ -1,8 +1,9 @@
-import { LightningElement,track} from 'lwc';
+import { LightningElement, track } from 'lwc';
 
 export default class CarSearch extends LightningElement {
-    @track carTypeId;
+
+    @track carTypeId = '';
     carTypeSelectHandler(event){
-      this.carTypeId = event.detail;
+        this.carTypeId = event.detail;
     }
 }
