@@ -8,8 +8,6 @@ export default class CarExperiences extends NavigationMixin(LightningElement) {
     PrivateCarId;
     @track carExperiences=[];
 
-
-
     connectedCallback(){
         this.getCarExperiences();
     }
